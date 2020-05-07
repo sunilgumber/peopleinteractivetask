@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:cardCornerRadius="@dimen/margin_8dp"
+        android:layout_marginBottom="5sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            tools:ignore="Overdraw">
+
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+                android:id="@+id/circleImageView"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border="false"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="8dp"
+                android:text="sunil kumar"
+                android:textAlignment="center"
+                android:textSize="@dimen/textsize_medium"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        <LinearLayout
+                android:id="@+id/linearLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/circleImageView">
+
+            <TextView
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="sunil kumar"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textsize_xxxlarge"
+                    android:textStyle="bold" />
+
+            <TextView
+                    android:id="@+id/age"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Age and lang"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textsize_xlarge"
+                    android:visibility="gone" />
+
+            <TextView
+                    android:id="@+id/address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Address and qualification"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textsize_xlarge" />
+
+            <TextView
+                    android:id="@+id/career"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Career status"
+                    android:textAlignment="center"
+                    android:textSize="@dimen/textsize_xlarge"
+                    android:visibility="gone" />
+
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/textstatus"
+                android:visibility="gone"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textsize_xxlarge"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+        <LinearLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="292dp"
+                android:layout_height="102dp"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                android:layout_marginBottom="8dp"
+                android:baselineAligned="false"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/linearLayout2">
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:id="@+id/decline"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/cirlce_background_blue"
+                        android:scaleType="center"
+                        android:src="@drawable/cancel" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/decline"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="2dp"
+                        android:text="Decline"
+                        android:textSize="@dimen/textsize_medium" />
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                <ImageView
+                        android:id="@+id/accept"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/cirlce_background_white"
+                        android:scaleType="center"
+                        android:src="@drawable/accept" />
+
+                <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/accept"
+                        android:layout_centerHorizontal="true"
+                        android:layout_margin="2dp"
+                        android:text="Accept"
+                        android:textSize="@dimen/textsize_medium" />
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</android.support.v7.widget.CardView>
